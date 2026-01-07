@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - OYEON Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .login-left {
+            background: linear-gradient(135deg, #003478 0%, #0047A0 100%);
+            color: white;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-left h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-left .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .login-left .features {
+            list-style: none;
+        }
+
+        .login-left .features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .login-left .features li::before {
+            content: '✓';
+            background: rgba(255, 255, 255, 0.2);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-right {
+            padding: 60px 40px;
+        }
+
+        .login-right h2 {
+            color: #003478;
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+
+        .login-right p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #003478;
+        }
+
+        .form-group input.error {
+            border-color: #CD2E3A;
+        }
+
+        .error-message {
+            color: #CD2E3A;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-login:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-login .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            margin: 0 auto;
+        }
+
+        .btn-login.loading .spinner {
+            display: block;
+        }
+
+        .btn-login.loading .text {
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .back-to-site {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .back-to-site a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .back-to-site a:hover {
+            color: #003478;
+        }
+
+        @media (max-width: 768px) {
+            .login-container {
+                grid-template-columns: 1fr;
+            }
+
+            .login-left {
+                padding: 40px 30px;
+            }
+
+            .login-left h1 {
+                font-size: 2rem;
+            }
+
+            .login-right {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <h1>🇰🇷 OYEON</h1>
+            <p class="tagline">Korean Travel Influencer<br>& Web Developer</p>
+            <ul class="features">
+                <li>จัดการบทความ</li>
+                <li>อนุมัติรีวิว</li>
+                <li>ติดตามสถิติ</li>
+                <li>อัพโหลดรูปภาพ</li>
+                <li>จัดการรายได้</li>
+            </ul>
+        </div>
+
+        <div class="login-right">
+            <h2>เข้าสู่ระบบ</h2>
+            <p>ยินดีต้อนรับกลับ! เข้าสู่ระบบเพื่อจัดการเว็บไซต์</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">ชื่อผู้ใช้</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        required
+                        autocomplete="username"
+                        placeholder="oyeon_admin"
+                    >
+                    <div class="error-message" id="usernameError">กรุณากรอกชื่อผู้ใช้</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        autocomplete="current-password"
+                        placeholder="••••••••"
+                    >
+                    <div class="error-message" id="passwordError">กรุณากรอกรหัสผ่าน</div>
+                </div>
+
+                <div class="error-message" id="generalError">ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</div>
+
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span class="text">เข้าสู่ระบบ</span>
+                    <div class="spinner"></div>
+                </button>
+            </form>
+
+            <div class="back-to-site">
+                <a href="../index.html">← กลับไปหน้าเว็บไซต์</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ⚠️ แก้ไข API URL ตรงนี้
+        const API_URL = 'https://script.google.com/macros/s/AKfycbwnNPcWDqJJlIYnnC-uBO0ANiHI_vv4rerY8_LP5OKlt69uBeS3Y018AGqgwDa8i-RJ/exec';
+
+        const loginForm = document.getElementById('loginForm');
+        const loginBtn = document.getElementById('loginBtn');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const generalError = document.getElementById('generalError');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.classList.remove('show');
+            });
+            document.querySelectorAll('input').forEach(el => {
+                el.classList.remove('error');
+            });
+
+            // Get values
+            const username = usernameInput.value.trim();
+            const password = passwordInput.value;
+
+            // Validate
+            let hasError = false;
+
+            if (!username) {
+                document.getElementById('usernameError').classList.add('show');
+                usernameInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (!password) {
+                document.getElementById('passwordError').classList.add('show');
+                passwordInput.classList.add('error');
+                hasError = true;
+            }
+
+            if (hasError) return;
+
+            // Show loading
+            loginBtn.disabled = true;
+            loginBtn.classList.add('loading');
+
+            try {
+                // Call API
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        action: 'login',
+                        username: username,
+                        password: password
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Save user data
+                    localStorage.setItem('admin_user', JSON.stringify(result.data));
+                    localStorage.setItem('admin_logged_in', 'true');
+                    localStorage.setItem('login_time', new Date().toISOString());
+
+                    // Redirect to dashboard
+                    window.location.href = 'dashboard.html';
+                } else {
+                    // Show error
+                    generalError.textContent = result.message || 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
+                    generalError.classList.add('show');
+                    usernameInput.classList.add('error');
+                    passwordInput.classList.add('error');
+                }
+
+            } catch (error) {
+                console.error('Login error:', error);
+                generalError.textContent = 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง';
+                generalError.classList.add('show');
+            } finally {
+                // Hide loading
+                loginBtn.disabled = false;
+                loginBtn.classList.remove('loading');
+            }
+        });
+
+        // Check if already logged in
+        if (localStorage.getItem('admin_logged_in') === 'true') {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

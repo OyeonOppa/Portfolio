@@ -1,0 +1,343 @@
+<!-- ========================================
+     NEWSLETTER COMPONENT
+     วางส่วนนี้ในหน้าเว็บหลัก (index.html)
+     ======================================== -->
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>📬 รับข่าวสารเกาหลี</h2>
+                <p>สมัครรับบทความใหม่ รีวิวอาหาร ข่าว K League และเคล็ดลับท่องเที่ยวเกาหลีทุกสัปดาห์!</p>
+                <ul class="newsletter-benefits">
+                    <li>✅ บทความใหม่เกี่ยวกับเกาหลี</li>
+                    <li>✅ รีวิวอาหารเกาหลีพิเศษ</li>
+                    <li>✅ เคล็ดลับการท่องเที่ยว</li>
+                    <li>✅ โปรโมชั่นและส่วนลด</li>
+                </ul>
+            </div>
+
+            <div class="newsletter-form-container">
+                <form id="newsletterForm" class="newsletter-form">
+                    <div class="form-row">
+                        <input 
+                            type="text" 
+                            id="newsletter-name" 
+                            name="name" 
+                            placeholder="ชื่อของคุณ"
+                            required
+                        >
+                    </div>
+                    <div class="form-row">
+                        <input 
+                            type="email" 
+                            id="newsletter-email" 
+                            name="email" 
+                            placeholder="อีเมลของคุณ"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn-subscribe" id="subscribeBtn">
+                        <span class="text">สมัครรับข่าวสาร</span>
+                        <span class="spinner"></span>
+                    </button>
+                    <p class="newsletter-privacy">
+                        เราเคารพความเป็นส่วนตัวของคุณ ยกเลิกได้ทุกเมื่อ
+                    </p>
+                </form>
+
+                <div class="newsletter-success" id="newsletterSuccess">
+                    <div class="success-icon">✅</div>
+                    <h3>สมัครสำเร็จ!</h3>
+                    <p>ขอบคุณที่สมัครรับข่าวสาร เราจะส่งอีเมลยืนยันให้คุณเร็วๆ นี้</p>
+                </div>
+
+                <div class="newsletter-error" id="newsletterError">
+                    <div class="error-icon">❌</div>
+                    <p id="newsletterErrorMessage"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ========================================
+   NEWSLETTER SECTION STYLES
+   ======================================== */
+.newsletter {
+    background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
+    padding: 80px 0;
+    color: white;
+}
+
+.newsletter-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.newsletter-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.newsletter-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.newsletter-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.newsletter-benefits li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.newsletter-form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter-form .form-row {
+    margin-bottom: 15px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: #003478;
+    box-shadow: 0 0 0 3px rgba(0, 52, 120, 0.1);
+}
+
+.newsletter-form input.error {
+    border-color: #CD2E3A;
+}
+
+.btn-subscribe {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+.btn-subscribe:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 52, 120, 0.3);
+}
+
+.btn-subscribe:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-subscribe .spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin: 0 auto;
+}
+
+.btn-subscribe.loading .spinner {
+    display: block;
+}
+
+.btn-subscribe.loading .text {
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.newsletter-privacy {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 15px;
+}
+
+.newsletter-success,
+.newsletter-error {
+    display: none;
+    text-align: center;
+    padding: 30px;
+}
+
+.newsletter-success.show,
+.newsletter-error.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.success-icon,
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-success h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.newsletter-success p,
+.newsletter-error p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.newsletter-error p {
+    color: #CD2E3A;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .newsletter-text h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter-form-container {
+        padding: 30px 20px;
+    }
+}
+</style>
+
+<script>
+/* ========================================
+   NEWSLETTER FORM JAVASCRIPT
+   ======================================== */
+(function() {
+    // ⚠️ แก้ไข API URL ตรงนี้
+    const API_URL = 'https://script.google.com/macros/s/AKfycbwnNPcWDqJJlIYnnC-uBO0ANiHI_vv4rerY8_LP5OKlt69uBeS3Y018AGqgwDa8i-RJ/exec';
+
+    const form = document.getElementById('newsletterForm');
+    const subscribeBtn = document.getElementById('subscribeBtn');
+    const successDiv = document.getElementById('newsletterSuccess');
+    const errorDiv = document.getElementById('newsletterError');
+    const errorMessage = document.getElementById('newsletterErrorMessage');
+
+    if (!form) return; // ถ้าไม่มี form ก็ไม่ต้องทำอะไร
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Reset
+        errorDiv.classList.remove('show');
+        document.querySelectorAll('.newsletter-form input').forEach(el => {
+            el.classList.remove('error');
+        });
+
+        // Get values
+        const name = document.getElementById('newsletter-name').value.trim();
+        const email = document.getElementById('newsletter-email').value.trim();
+
+        // Validate
+        if (!name || name.length < 2) {
+            document.getElementById('newsletter-name').classList.add('error');
+            errorMessage.textContent = 'กรุณากรอกชื่อที่ถูกต้อง';
+            errorDiv.classList.add('show');
+            return;
+        }
+
+        if (!email || !isValidEmail(email)) {
+            document.getElementById('newsletter-email').classList.add('error');
+            errorMessage.textContent = 'กรุณากรอกอีเมลที่ถูกต้อง';
+            errorDiv.classList.add('show');
+            return;
+        }
+
+        // Show loading
+        subscribeBtn.disabled = true;
+        subscribeBtn.classList.add('loading');
+
+        try {
+            // Call API
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    action: 'subscribeEmail',
+                    name: name,
+                    email: email
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                // Show success
+                form.style.display = 'none';
+                successDiv.classList.add('show');
+            } else {
+                // Show error
+                errorMessage.textContent = result.message || 'เกิดข้อผิดพลาด กรุณาลองใหม่';
+                errorDiv.classList.add('show');
+            }
+
+        } catch (error) {
+            console.error('Subscribe error:', error);
+            errorMessage.textContent = 'เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่อีกครั้ง';
+            errorDiv.classList.add('show');
+        } finally {
+            // Hide loading
+            subscribeBtn.disabled = false;
+            subscribeBtn.classList.remove('loading');
+        }
+    });
+
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+})();
+</script>
