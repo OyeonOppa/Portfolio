@@ -90,7 +90,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     /* เปลี่ยนเป็นภาพจริง - ดาวน์โหลดจาก Unsplash */
-    background-image: url('../images/hero-background.jpg');
+    background-image: url('images/hero-background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1063,5 +1063,122 @@ footer {
     /* Tools Grid */
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   FLOATING SUPPORT BUTTON
+   ======================================== */
+
+/* แก้ไข social-floating เดิม */
+.social-floating {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Support Button - พิเศษกว่าปกติ */
+.social-btn.support {
+    background: linear-gradient(135deg, #FFDD00 0%, #FFA500 100%);
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+    position: relative;
+}
+
+.social-btn.support::before {
+    content: '☕';
+}
+
+.social-btn.support::after {
+    content: 'Support';
+    position: absolute;
+    right: 70px;
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.social-btn.support:hover::after {
+    opacity: 1;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Existing button colors */
+.social-btn.github {
+    background: #333;
+}
+
+.social-btn.linkedin {
+    background: #0077b5;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.facebook {
+    background: #1877f2;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .social-floating {
+        right: 20px;
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .social-btn.support {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-btn.support::after {
+        display: none;
     }
 }
