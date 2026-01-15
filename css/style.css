@@ -1,5 +1,5 @@
 /* ========================================
-   OYEON Portfolio - CSS Stylesheet
+   OYEON Portfolio - CSS Stylesheet (Fixed)
    ======================================== */
 
 /* Reset & Base Styles */
@@ -89,7 +89,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* เปลี่ยนเป็นภาพจริง - ดาวน์โหลดจาก Unsplash */
     background-image: url('../images/hero-background.webp');
     background-size: cover;
     background-position: center;
@@ -130,14 +129,10 @@ nav a:hover {
     animation: gradientShift 8s ease infinite;
 }
 
-@keyframes gradientShift {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 0.5; }
-}
-
 .hero-content {
     position: relative;
     z-index: 1;
+    animation: float 6s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -269,7 +264,6 @@ section {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* ถ้าใช้รูปจริง ใส่ CSS นี้ */
 .about-image img {
     width: 100%;
     height: 100%;
@@ -340,7 +334,6 @@ section {
     overflow: hidden;
 }
 
-/* ถ้าใช้รูปจริง */
 .content-card-image img {
     width: 100%;
     height: 100%;
@@ -496,248 +489,6 @@ section {
 }
 
 /* ========================================
-   PROJECTS SECTION
-   ======================================== */
-.projects {
-    background: var(--light);
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: white;
-}
-
-/* ถ้าใช้รูปจริง */
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project-body {
-    padding: 1.5rem;
-}
-
-.project-body h3 {
-    margin-bottom: 0.5rem;
-    color: var(--dark);
-}
-
-.project-tags {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.tag {
-    background: var(--light);
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    color: #666;
-}
-
-/* ========================================
-   CONTACT SECTION
-   ======================================== */
-.contact {
-    background: white;
-    text-align: center;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    width: 60px;
-    height: 60px;
-    background: var(--light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--dark);
-    transition: transform 0.3s, background 0.3s;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.social-link:hover {
-    transform: translateY(-5px);
-    background: var(--korean-red);
-    color: white;
-}
-
-/* ========================================
-   FOOTER
-   ======================================== */
-footer {
-    background: var(--dark);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes gradientShift {
-    0%, 100% { 
-        opacity: 0.3; 
-    }
-    50% { 
-        opacity: 0.5; 
-    }
-}
-
-/* Floating animation for hero elements */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-/* Apply floating to hero content */
-.hero-content {
-    animation: float 6s ease-in-out infinite;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-@media (max-width: 768px) {
-    /* Navigation */
-    nav ul {
-        display: none;
-    }
-
-    /* Hero */
-    .hero {
-        background-size: cover;
-        background-position: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-        text-shadow: 
-            0 2px 8px rgba(0, 0, 0, 0.5),
-            0 4px 16px rgba(0, 0, 0, 0.4);
-    }
-
-    .hero .tagline {
-        font-size: 1.2rem;
-    }
-
-    .hero .subtitle {
-        font-size: 1rem;
-    }
-
-    /* About */
-    .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-image {
-        margin: 0 auto;
-        font-size: 5rem;
-    }
-
-    /* Section Title */
-    .section-title {
-        font-size: 2rem;
-    }
-
-    /* Content Grid */
-    .content-grid,
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Social Links */
-    .social-links {
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Buttons */
-    .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    /* Section Padding */
-    section {
-        padding: 3rem 1rem;
-    }
-
-    /* About Image */
-    .about-image {
-        max-width: 250px;
-        font-size: 4rem;
-    }
-
-    /* Hero */
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero .tagline {
-        font-size: 1rem;
-    }
-
-    .hero .subtitle {
-        font-size: 0.9rem;
-    }
-}
-
-/* ========================================
    TOOLS & OTHERS SECTION
    ======================================== */
 .tools {
@@ -783,6 +534,72 @@ footer {
 .tool-item:nth-child(4) i { color: #F24E1E; } /* Figma */
 .tool-item:nth-child(5) i { color: #007ACC; } /* VS Code */
 .tool-item:nth-child(6) i { color: #0F9D58; } /* Google Sheets */
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+.projects {
+    background: var(--light);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-body {
+    padding: 1.5rem;
+}
+
+.project-body h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
 
 /* ========================================
    TESTIMONIALS SECTION
@@ -863,7 +680,7 @@ footer {
 }
 
 /* ========================================
-   RESUME CTA SECTION
+   RESUME CTA / SUPPORT SECTION
    ======================================== */
 .resume-cta {
     background: linear-gradient(135deg, var(--korean-blue), var(--korean-red));
@@ -907,16 +724,52 @@ footer {
 }
 
 /* ========================================
+   CONTACT SECTION
+   ======================================== */
+.contact {
+    background: white;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    width: 60px;
+    height: 60px;
+    background: var(--light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--dark);
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    background: var(--korean-red);
+    color: white;
+}
+
+/* ========================================
    SOCIAL FLOATING BUTTONS
    ======================================== */
 .social-floating {
     position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    right: 30px;
+    bottom: 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
     z-index: 1000;
 }
 
@@ -927,55 +780,78 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
     color: white;
+    font-size: 1.3rem;
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .social-btn:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
-
-/* Delay animations */
-.social-btn:nth-child(1) { animation-delay: 0s; }
-.social-btn:nth-child(2) { animation-delay: 0.2s; }
-.social-btn:nth-child(3) { animation-delay: 0.4s; }
-.social-btn:nth-child(4) { animation-delay: 0.6s; }
 
 /* GitHub */
 .social-btn.github {
-    background-color: #333;
+    background: #333;
 }
 
 .social-btn.github:hover {
-    background-color: #24292e;
+    background: #24292e;
 }
 
 /* LinkedIn */
 .social-btn.linkedin {
-    background-color: #0a66c2;
+    background: #0077b5;
 }
 
 .social-btn.linkedin:hover {
-    background-color: #004182;
+    background: #005885;
 }
 
 /* Instagram */
 .social-btn.instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 /* Facebook */
 .social-btn.facebook {
-    background-color: #1877f2;
+    background: #1877f2;
 }
 
 .social-btn.facebook:hover {
-    background-color: #0d65d9;
+    background: #0d65d9;
+}
+
+/* Support Button (☕) - แก้ไขให้ไม่มี ::before */
+.social-btn.support {
+    background: linear-gradient(135deg, #FFDD00 0%, #FFA500 100%);
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+    position: relative;
+}
+
+/* Tooltip เมื่อ hover */
+.social-btn.support::after {
+    content: 'Support';
+    position: absolute;
+    right: 70px;
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.social-btn.support:hover::after {
+    opacity: 1;
 }
 
 /* ========================================
@@ -1012,9 +888,108 @@ footer {
 }
 
 /* ========================================
-   RESPONSIVE - ADDITIONAL
+   FOOTER
+   ======================================== */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientShift {
+    0%, 100% { 
+        opacity: 0.3; 
+    }
+    50% { 
+        opacity: 0.5; 
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        text-shadow: 
+            0 2px 8px rgba(0, 0, 0, 0.5),
+            0 4px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero .tagline {
+        font-size: 1.2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 0 auto;
+        font-size: 5rem;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Content Grid */
+    .content-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
     /* Tools Grid */
     .tools-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -1041,127 +1016,6 @@ footer {
 
     /* Social Floating */
     .social-floating {
-        right: 10px;
-    }
-
-    .social-btn {
-        width: 45px;
-        height: 45px;
-        font-size: 1.2rem;
-    }
-
-    /* Back to Top */
-    .back-to-top {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Tools Grid */
-    .tools-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* ========================================
-   FLOATING SUPPORT BUTTON
-   ======================================== */
-
-/* แก้ไข social-floating เดิม */
-.social-floating {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 1000;
-}
-
-.social-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.3rem;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.social-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Support Button - พิเศษกว่าปกติ */
-.social-btn.support {
-    background: linear-gradient(135deg, #FFDD00 0%, #FFA500 100%);
-    width: 55px;
-    height: 55px;
-    font-size: 1.5rem;
-    animation: pulse 2s infinite;
-    position: relative;
-}
-
-.social-btn.support::before {
-    content: '☕';
-}
-
-.social-btn.support::after {
-    content: 'Support';
-    position: absolute;
-    right: 70px;
-    background: #333;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-}
-
-.social-btn.support:hover::after {
-    opacity: 1;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-/* Existing button colors */
-.social-btn.github {
-    background: #333;
-}
-
-.social-btn.linkedin {
-    background: #0077b5;
-}
-
-.social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-btn.facebook {
-    background: #1877f2;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .social-floating {
         right: 20px;
         bottom: 20px;
         gap: 10px;
@@ -1178,11 +1032,58 @@ footer {
         height: 50px;
     }
 
+    /* ซ่อน tooltip บน mobile */
     .social-btn.support::after {
         display: none;
     }
 
+    /* Social Links */
+    .social-links {
+        gap: 1rem;
+    }
+
+    /* Back to Top */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }
 
+@media (max-width: 480px) {
+    /* Buttons */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
 
+    /* Section Padding */
+    section {
+        padding: 3rem 1rem;
+    }
 
+    /* About Image */
+    .about-image {
+        max-width: 250px;
+        font-size: 4rem;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero .tagline {
+        font-size: 1rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
