@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="OYEON - Korea Travel Influencer & Web Developer"
-    />
-    <title>OYEON - Korea Influencer & Specialist | Web Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Korea Travel Influencer & Insider sharing real travel experiences, cultural insights, and perspectives on Korea — beyond trends and hype." />
+    <meta name="keywords" content="Korea Travel, Korean Culture, Travel Influencer, K-League, Korean Food, Seoul, Busan, Web Developer" />
+    <meta name="author" content="OYEON" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="OYEON - Korea Travel Influencer & Insider" />
+    <meta property="og:description" content="Sharing real travel experiences and cultural insights on Korea — beyond trends and hype." />
+    <meta property="og:url" content="https://yoursite.com" />
+    
+    <title>OYEON - Korea Travel Influencer & Insider | Web Developer</title>
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/improvements.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -18,79 +31,93 @@
       <div class="container">
         <div class="logo">OYEON</div>
         <ul>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#content">Contents</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#articles">Articles (TH)</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#tools">Tools</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#projects">Work with Me</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="hero-content">
-        <h1>I'm OYEON</h1>
-        <p class="tagline">Korea Influencer & Specialist</p>
-        <p class="subtitle">
-          Korea Traveler | K-League Enthusiast | Web Developer
+        <h1>Korea Travel Influencer & Insider</h1>
+        <p class="tagline">
+          Sharing real travel experiences, cultural insights, and perspectives on Korea — beyond trends and hype.
         </p>
-        <a href="#content" class="btn">My Contents</a>
-        <a href="#projects" class="btn btn-secondary">My Projects</a>
+        <p class="subtitle">
+          Based on lived experience. Also skilled in web development.
+        </p>
+        <div class="hero-buttons">
+          <a href="#articles" class="btn">View Articles (Thai)</a>
+          <a href="#projects" class="btn btn-secondary">Work with Me</a>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2 class="section-title">เกี่ยวกับผม</h2>
+        <h2 class="section-title">About Me</h2>
         <div class="about-content">
           <div class="about-image">
-            <img src="images/profile.webp" alt="OYEON Profile" />
+            <img src="images/profile.webp" alt="OYEON Profile" loading="lazy" />
           </div>
           <div class="about-text">
-            <h3>สวัสดีครับ! ยินดีที่ได้รู้จัก</h3>
-            <p>
-              ผมเป็น
-              <strong>IT Administrator</strong>
-              ที่มีความหลงใหลในวัฒนธรรมเกาหลีมากกว่า 10 ปี และตอนนี้ผมทำงานเป็น
-              <strong>Korean Travel Influencer</strong> เต็มตัว
-            </p>
-            <p>
-              เป้าหมายของผมคือการสร้างคอนเทนต์ที่ช่วยให้คนไทยได้เข้าใจวัฒนธรรมเกาหลีแบบลึกซึ้ง
-              ไม่ใช่แค่แหล่งท่องเที่ยวยอดนิยม แต่รวมถึง
-              <strong>อาหารท้องถิ่น</strong>, <strong>K League</strong>,
-              และไลฟ์สไตล์ของคนเกาหลีที่แท้จริง
-            </p>
-            <p>
-              นอกจากนี้ ผมยังใช้ทักษะด้าน
-              <strong>Web Development</strong> พัฒนาเว็บแอปพลิเคชันต่างๆ
-              โดยเฉพาะระบบงานสำหรับองค์กรภาครัฐ
-            </p>
+            <h3>안녕하세요 👋</h3>
+            
+            <!-- English Version -->
+            <div class="about-english">
+              <p>
+                I am a Korea-focused travel influencer and content creator, sharing firsthand experiences and in-depth perspectives on traveling, culture, and everyday life in South Korea.
+              </p>
+              <p>
+                My work goes beyond popular destinations, focusing on understanding places through context, history, and real encounters.
+              </p>
+              <p>
+                In addition to content creation, I have a background in web development, allowing me to build and manage my own platforms independently.
+              </p>
+            </div>
+
+            <!-- Korean Version -->
+            <div class="about-korean">
+              <p>
+                한국 여행과 문화를 중심으로 활동하는 콘텐츠 크리에이터입니다.<br>
+                실제 경험을 바탕으로 관광지, 지역 이야기, 그리고 한국의 일상을 깊이 있게 소개합니다.
+              </p>
+              <p>
+                또한 웹 개발 경험을 바탕으로 디지털 콘텐츠와 플랫폼을 직접 구축하고 운영하고 있습니다.
+              </p>
+            </div>
 
             <div class="interests">
               <span class="interest-tag">🍜 Korea Culture & History</span>
               <span class="interest-tag">⚽ K-League</span>
               <span class="interest-tag">✈️ Korea Travel</span>
               <span class="interest-tag">💻 Web Developer</span>
-              <span class="interest-tag">🌏 K-Language</span>
+              <span class="interest-tag">🌏 Korean Language</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Content Showcase Section -->
-    <section id="content" class="content-showcase">
+    <!-- Articles Section (Thai Content) -->
+    <section id="articles" class="content-showcase">
       <div class="container">
-        <h2 class="section-title">คอนเทนต์ของผม</h2>
+        <h2 class="section-title">บทความ & มุมมองส่วนตัวเกี่ยวกับเกาหลี</h2>
+        <p class="section-subtitle">
+          บันทึกจากประสบการณ์จริงในการเดินทาง สำรวจเมือง วัฒนธรรม และเรื่องเล็ก ๆ ในเกาหลี ที่ไม่ได้อยู่ในไกด์บุ๊ก
+        </p>
+        
         <div class="content-grid">
           <div class="content-card">
             <div class="content-card-image">
-              <img src="images/korean-food.webp" alt="Korean Food" />
+              <img src="images/korean-food.webp" alt="Korean Food" loading="lazy" />
             </div>
             <div class="content-card-body">
               <h3>Korean Food Reviews</h3>
@@ -106,7 +133,7 @@
 
           <div class="content-card">
             <div class="content-card-image">
-              <img src="images/kleague-stadium.webp" alt="K League" />
+              <img src="images/kleague-stadium.webp" alt="K League" loading="lazy" />
             </div>
             <div class="content-card-body">
               <h3>K League Coverage</h3>
@@ -122,7 +149,7 @@
 
           <div class="content-card">
             <div class="content-card-image">
-              <img src="images/korea-travel.webp" alt="Travel Korea" />
+              <img src="images/korea-travel.webp" alt="Travel Korea" loading="lazy" />
             </div>
             <div class="content-card-body">
               <h3>Travel Guides</h3>
@@ -138,7 +165,7 @@
 
           <div class="content-card">
             <div class="content-card-image">
-              <img src="images/korean-news.webp" alt="Korean News" />
+              <img src="images/korean-news.webp" alt="Korean News" loading="lazy" />
             </div>
             <div class="content-card-body">
               <h3>Korean News Translation</h3>
@@ -155,21 +182,35 @@
       </div>
     </section>
 
-    <!-- Blog/Posts Section -->
+    <!-- Blog/Posts Section (Thai) -->
     <section id="blog" class="blog">
       <div class="container">
-        <h2 class="section-title">Article & Blog</h2>
+        <h2 class="section-title">Latest Articles</h2>
         <p class="blog-intro">
           ความคิดเห็น ประสบการณ์ และเรื่องราวที่อยากแบ่งปัน
         </p>
 
-        <!-- JavaScript จะโหลดโพสต์มาใส่ตรงนี้อัตโนมัติ -->
+        <!-- Skeleton Loader -->
         <div id="blog-posts-container" class="blog-grid">
-          <p style="text-align: center; color: #999">กำลังโหลดโพสต์...</p>
+          <div class="skeleton-post">
+            <div class="skeleton-date"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-excerpt"></div>
+          </div>
+          <div class="skeleton-post">
+            <div class="skeleton-date"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-excerpt"></div>
+          </div>
+          <div class="skeleton-post">
+            <div class="skeleton-date"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-excerpt"></div>
+          </div>
         </div>
 
         <div class="more-posts">
-          <a href="#" class="btn">ดูบทความทั้งหมด</a>
+          <a href="#articles" class="btn">ดูบทความทั้งหมด</a>
         </div>
       </div>
     </section>
@@ -210,30 +251,30 @@
     <!-- Tools & Others Section -->
     <section id="tools" class="tools">
       <div class="container">
-        <h2 class="section-title">Tools & Others</h2>
+        <h2 class="section-title">Tools & Technologies</h2>
         <div class="tools-grid">
-          <div class="tool-item" data-aos="zoom-in">
-            <i class="fa-brands fa-git-alt"></i>
+          <div class="tool-item">
+            <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
             <p>Git</p>
           </div>
-          <div class="tool-item" data-aos="zoom-in" data-aos-delay="100">
-            <i class="fa-brands fa-github"></i>
+          <div class="tool-item">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
             <p>GitHub</p>
           </div>
-          <div class="tool-item" data-aos="zoom-in" data-aos-delay="200">
-            <i class="fa-brands fa-google"></i>
+          <div class="tool-item">
+            <i class="fa-brands fa-google" aria-hidden="true"></i>
             <p>Apps Script</p>
           </div>
-          <div class="tool-item" data-aos="zoom-in" data-aos-delay="300">
-            <i class="fa-brands fa-figma"></i>
+          <div class="tool-item">
+            <i class="fa-brands fa-figma" aria-hidden="true"></i>
             <p>Figma</p>
           </div>
-          <div class="tool-item" data-aos="zoom-in" data-aos-delay="400">
-            <i class="fa-solid fa-code"></i>
+          <div class="tool-item">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
             <p>VS Code</p>
           </div>
-          <div class="tool-item" data-aos="zoom-in" data-aos-delay="500">
-            <i class="fa-solid fa-database"></i>
+          <div class="tool-item">
+            <i class="fa-solid fa-database" aria-hidden="true"></i>
             <p>Google Sheets</p>
           </div>
         </div>
@@ -243,12 +284,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section-title">ผลงานที่ผ่านมา</h2>
+        <h2 class="section-title">Work with Me</h2>
+        <p class="section-subtitle">Open for collaborations, media features, and travel-related projects.</p>
+        <p class="section-subtitle-korean">여행·문화 관련 협업 및 프로젝트 제안을 환영합니다.</p>
+        
         <div class="project-grid">
           <div class="project-card">
             <div class="project-image">
               📊
-              <!-- <img src="images/project1.jpg" alt="Project 1"> -->
             </div>
             <div class="project-body">
               <h3>KPI Democracy Run 2026</h3>
@@ -267,7 +310,6 @@
           <div class="project-card">
             <div class="project-image">
               🗳️
-              <!-- <img src="images/project2.jpg" alt="Project 2"> -->
             </div>
             <div class="project-body">
               <h3>Political Opinion Poll System</h3>
@@ -286,7 +328,6 @@
           <div class="project-card">
             <div class="project-image">
               🇰🇷
-              <!-- <img src="images/project3.jpg" alt="Project 3"> -->
             </div>
             <div class="project-body">
               <h3>K-League Database</h3>
@@ -305,12 +346,12 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section (Thai) -->
     <section id="testimonials" class="testimonials">
       <div class="container">
         <h2 class="section-title">ความคิดเห็นจากลูกค้า</h2>
         <div class="testimonials-slider">
-          <div class="testimonial-item active" data-aos="fade-up">
+          <div class="testimonial-item active">
             <div class="testimonial-content">
               <p class="quote">
                 "ทำงานกับ OYEON เป็นประสบการณ์ที่ดีมาก ระบบที่สร้างใช้งานง่าย
@@ -323,7 +364,7 @@
             </div>
           </div>
 
-          <div class="testimonial-item" data-aos="fade-up">
+          <div class="testimonial-item">
             <div class="testimonial-content">
               <p class="quote">
                 "คอนเทนต์เกี่ยวกับเกาหลีของ OYEON ให้ข้อมูลลึกซึ้งและน่าสนใจมาก
@@ -336,7 +377,7 @@
             </div>
           </div>
 
-          <div class="testimonial-item" data-aos="fade-up">
+          <div class="testimonial-item">
             <div class="testimonial-content">
               <p class="quote">
                 "ระบบลงทะเบียนที่พัฒนาให้ช่วยประหยัดเวลาในการทำงานได้มาก และมี
@@ -356,883 +397,213 @@
             <span class="dot" data-index="2"></span>
           </div>
         </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="testimonial-form.html" class="btn">✍️ ส่งรีวิวของคุณ</a>
+        </div>
       </div>
-              <!-- ในหน้า Contact Section --><br><center>
-      <a href="/testimonial-form.html" class="btn">✍️ ส่งรีวิวของคุณ</a></center>
     </section>
 
-    <!-- Resume CTA Section -->
-    <section class="resume-cta"><center>
-      <div class="container text-center" data-aos="zoom-in">
-        <h2>สนใจทำงานด้วยกันไหมครับ?</h2>
-        <p class="lead">ดาวน์โหลดเรซูเม่ของผม หรือติดต่อมาคุยกันได้เลย</p>
-        <a href="resume.pdf" class="btn btn-download" target="_blank">
-          <i class="fa-solid fa-download"></i> ดาวน์โหลดเรซูเม่
+    <!-- Support Section (English) -->
+    <section id="support" class="resume-cta">
+      <div class="container" style="text-align: center;">
+        <h2>Support Independent Travel Writing</h2>
+        <p class="lead">
+          If you find value in independent writing and real-world travel insights,<br>
+          you can support this work here.
+        </p>
+        <a href="https://www.buymeacoffee.com/oyeon" class="btn btn-download" target="_blank" rel="noopener noreferrer">
+          ☕ Buy Me a Coffee
         </a>
-      </div></center>
+      </div>
     </section>
 
-<!-- ========================================
-     CONTACT FORM SECTION
-     แทนที่ส่วน Contact เดิมใน index.html
-     ======================================== -->
-
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-title">ติดต่อผม</h2>
+    <!-- Contact Form Section (English + Korean) -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
         <p class="contact-intro">
-            สนใจคอนเทนต์เกี่ยวกับเกาหลี หรือต้องการ consult เรื่อง web development?<br />
-            ส่งข้อความมาได้เลยครับ!
+          Open for collaborations, media features, and travel-related projects.<br>
+          <span class="korean-text">여행·문화 관련 협업 및 프로젝트 제안을 환영합니다.</span>
         </p>
 
         <div class="contact-wrapper">
-            <!-- Contact Info -->
-            <div class="contact-info-side">
-                <div class="info-card">
-                    <div class="info-icon">📧</div>
-                    <h4>Email</h4>
-                    <p>worasit.koa@gmail.com</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">📍</div>
-                    <h4>Location</h4>
-                    <p>Bangkok, Thailand</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">⏰</div>
-                    <h4>Response Time</h4>
-                    <p>ภายใน 24 ชั่วโมง</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="info-icon">🇰🇷</div>
-                    <h4>Languages</h4>
-                    <p>ไทย, English, 한국어</p>
-                </div>
+          <!-- Contact Info -->
+          <div class="contact-info-side">
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <h4>Email</h4>
+              <p><a href="mailto:oyeonoppa@naver.com">oyeonoppa@naver.com</a></p>
             </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form-wrapper">
-                <form id="contactForm" class="contact-form">
-                    <div class="form-row-double">
-                        <div class="form-group">
-                            <label for="contact-name">
-                                ชื่อของคุณ <span class="required">*</span>
-                            </label>
-                            <input 
-                                type="text" 
-                                id="contact-name" 
-                                name="name" 
-                                placeholder="เช่น คุณสมชาย"
-                                required
-                            >
-                            <div class="error-msg" id="nameError"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="contact-email">
-                                อีเมล <span class="required">*</span>
-                            </label>
-                            <input 
-                                type="email" 
-                                id="contact-email" 
-                                name="email" 
-                                placeholder="example@email.com"
-                                required
-                            >
-                            <div class="error-msg" id="emailError"></div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-subject">
-                            หัวข้อ <span class="required">*</span>
-                        </label>
-                        <select id="contact-subject" name="subject" required>
-                            <option value="">-- เลือกหัวข้อ --</option>
-                            <option value="web-development">💻 Web Development</option>
-                            <option value="korea-content">🇰🇷 Korea Content Collaboration</option>
-                            <option value="consulting">📊 Consulting</option>
-                            <option value="general">💬 General Inquiry</option>
-                            <option value="other">🔧 Other</option>
-                        </select>
-                        <div class="error-msg" id="subjectError"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-message">
-                            ข้อความ <span class="required">*</span>
-                        </label>
-                        <textarea 
-                            id="contact-message" 
-                            name="message" 
-                            rows="6"
-                            placeholder="เขียนข้อความของคุณที่นี่..."
-                            required
-                        ></textarea>
-                        <div class="error-msg" id="messageError"></div>
-                    </div>
-
-                    <div class="error-msg general-error" id="generalError"></div>
-
-                    <button type="submit" class="btn-submit-contact" id="submitContactBtn">
-                        <span class="text">ส่งข้อความ</span>
-                        <span class="spinner"></span>
-                    </button>
-                </form>
-
-                <!-- Success Message -->
-                <div class="contact-success" id="contactSuccess">
-                    <div class="success-icon">✅</div>
-                    <h3>ส่งข้อความสำเร็จ!</h3>
-                    <p>ขอบคุณที่ติดต่อมา ผมจะตอบกลับภายใน 24 ชั่วโมงครับ</p>
-                    <button class="btn" onclick="resetContactForm()">ส่งข้อความใหม่</button>
-                </div>
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <h4>Location</h4>
+              <p>Bangkok, Thailand</p>
             </div>
+
+            <div class="info-card">
+              <div class="info-icon">⏰</div>
+              <h4>Response Time</h4>
+              <p>Within 24 hours</p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">🇰🇷</div>
+              <h4>Languages</h4>
+              <p>ไทย, English, 한국어</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper">
+            <form id="contactForm" class="contact-form">
+              <div class="form-row-double">
+                <div class="form-group">
+                  <label for="contact-name">
+                    Name <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    placeholder="Your name"
+                    required
+                    aria-required="true"
+                  >
+                  <div class="error-msg" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">
+                    Email <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    placeholder="your@email.com"
+                    required
+                    aria-required="true"
+                  >
+                  <div class="error-msg" id="emailError"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">
+                  Subject <span class="required">*</span>
+                </label>
+                <select id="contact-subject" name="subject" required aria-required="true">
+                  <option value="">-- Select a subject --</option>
+                  <option value="web-development">💻 Web Development</option>
+                  <option value="korea-content">🇰🇷 Korea Content Collaboration</option>
+                  <option value="consulting">📊 Consulting</option>
+                  <option value="general">💬 General Inquiry</option>
+                  <option value="other">🔧 Other</option>
+                </select>
+                <div class="error-msg" id="subjectError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">
+                  Message <span class="required">*</span>
+                </label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="6"
+                  placeholder="Write your message here..."
+                  required
+                  aria-required="true"
+                ></textarea>
+                <div class="error-msg" id="messageError"></div>
+              </div>
+
+              <div class="error-msg general-error" id="generalError"></div>
+
+              <button type="submit" class="btn-submit-contact" id="submitContactBtn" aria-label="Send message">
+                <span class="text">Send Message</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <!-- Success Message -->
+            <div class="contact-success" id="contactSuccess">
+              <div class="success-icon">✅</div>
+              <h3>Message Sent Successfully!</h3>
+              <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+              <button class="btn" onclick="resetContactForm()">Send Another Message</button>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<style>
-/* ========================================
-   CONTACT FORM STYLES
-   ======================================== */
-.contact {
-    background: #f8f9fa;
-    padding: 80px 0;
-}
-
-.contact-intro {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    color: #666;
-}
-
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Contact Info Side */
-.contact-info-side {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.info-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.info-icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.info-card h4 {
-    color: #003478;
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-}
-
-.info-card p {
-    color: #666;
-    font-size: 0.95rem;
-    margin: 0;
-}
-
-/* Contact Form */
-.contact-form-wrapper {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form .form-row-double {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.contact-form .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.contact-form label .required {
-    color: #CD2E3A;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #003478;
-    box-shadow: 0 0 0 3px rgba(0, 52, 120, 0.1);
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.contact-form input.error,
-.contact-form select.error,
-.contact-form textarea.error {
-    border-color: #CD2E3A;
-}
-
-.error-msg {
-    color: #CD2E3A;
-    font-size: 0.85rem;
-    margin-top: 5px;
-    display: none;
-}
-
-.error-msg.show {
-    display: block;
-}
-
-.general-error {
-    margin-bottom: 15px;
-    padding: 10px;
-    background: #ffebee;
-    border-radius: 5px;
-}
-
-.btn-submit-contact {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-submit-contact:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0, 52, 120, 0.3);
-}
-
-.btn-submit-contact:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.btn-submit-contact .spinner {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 0.6s linear infinite;
-    margin: 0 auto;
-}
-
-.btn-submit-contact.loading .spinner {
-    display: block;
-}
-
-.btn-submit-contact.loading .text {
-    display: none;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* Success Message */
-.contact-success {
-    display: none;
-    text-align: center;
-    padding: 40px;
-}
-
-.contact-success.show {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.success-icon {
-    font-size: 4rem;
-    margin-bottom: 20px;
-}
-
-.contact-success h3 {
-    color: #4CAF50;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.contact-success p {
-    color: #666;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-/* Responsive */
-@media (max-width: 968px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contact-info-side {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .info-card {
-        flex: 1;
-        min-width: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-form-wrapper {
-        padding: 30px 20px;
-    }
-
-    .contact-form .form-row-double {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .contact-info-side {
-        flex-direction: column;
-    }
-
-    .info-card {
-        min-width: auto;
-    }
-}
-</style>
-
-<script>
-/* ========================================
-   CONTACT FORM JAVASCRIPT
-   ======================================== */
-(function() {
-    // ⚠️ แก้ไข API URL ตรงนี้
-    const API_URL = 'YOUR_WEB_APP_URL_HERE';
-
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitContactBtn');
-    const successDiv = document.getElementById('contactSuccess');
-
-    if (!form) return;
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // Reset errors
-        document.querySelectorAll('.error-msg').forEach(el => {
-            el.classList.remove('show');
-            el.textContent = '';
-        });
-        document.querySelectorAll('.contact-form input, .contact-form select, .contact-form textarea').forEach(el => {
-            el.classList.remove('error');
-        });
-
-        // Get values
-        const name = document.getElementById('contact-name').value.trim();
-        const email = document.getElementById('contact-email').value.trim();
-        const subject = document.getElementById('contact-subject').value;
-        const message = document.getElementById('contact-message').value.trim();
-
-        // Validate
-        let hasError = false;
-
-        if (!name || name.length < 2) {
-            showError('nameError', 'กรุณากรอกชื่อที่ถูกต้อง (อย่างน้อย 2 ตัวอักษร)');
-            document.getElementById('contact-name').classList.add('error');
-            hasError = true;
-        }
-
-        if (!email || !isValidEmail(email)) {
-            showError('emailError', 'กรุณากรอกอีเมลที่ถูกต้อง');
-            document.getElementById('contact-email').classList.add('error');
-            hasError = true;
-        }
-
-        if (!subject) {
-            showError('subjectError', 'กรุณาเลือกหัวข้อ');
-            document.getElementById('contact-subject').classList.add('error');
-            hasError = true;
-        }
-
-        if (!message || message.length < 10) {
-            showError('messageError', 'กรุณาเขียนข้อความอย่างน้อย 10 ตัวอักษร');
-            document.getElementById('contact-message').classList.add('error');
-            hasError = true;
-        }
-
-        if (hasError) {
-            showError('generalError', 'กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง');
-            return;
-        }
-
-        // Show loading
-        submitBtn.disabled = true;
-        submitBtn.classList.add('loading');
-
-        try {
-            // Call API
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'text/plain',
-                },
-                body: JSON.stringify({
-                    action: 'submitContact',
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message
-                })
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                // Show success
-                form.style.display = 'none';
-                successDiv.classList.add('show');
-            } else {
-                showError('generalError', result.message || 'เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง');
-            }
-
-        } catch (error) {
-            console.error('Submit error:', error);
-            showError('generalError', 'เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง');
-        } finally {
-            // Hide loading
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('loading');
-        }
-    });
-
-    function showError(elementId, message) {
-        const errorEl = document.getElementById(elementId);
-        errorEl.textContent = message;
-        errorEl.classList.add('show');
-    }
-
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-
-    // Reset form function (global)
-    window.resetContactForm = function() {
-        form.reset();
-        form.style.display = 'block';
-        successDiv.classList.remove('show');
-    };
-})();
-</script>
-
-    <!-- ⬇️ เพิ่ม Newsletter Section ตรงนี้ -->
+    <!-- Newsletter Section (Thai) -->
     <section id="newsletter" class="newsletter">
-        <!-- ========================================
-     NEWSLETTER COMPONENT
-     วางส่วนนี้ในหน้าเว็บหลัก (index.html)
-     ======================================== -->
-
-<!-- Newsletter Section -->
-<section id="newsletter" class="newsletter">
-    <div class="container">
+      <div class="container">
         <div class="newsletter-content">
-            <div class="newsletter-text">
-                <h2>📬 รับข่าวสารเกาหลี</h2>
-                <p>สมัครรับบทความใหม่ รีวิวอาหาร ข่าว K League และเคล็ดลับท่องเที่ยวเกาหลีทุกสัปดาห์!</p>
-                <ul class="newsletter-benefits">
-                    <li>✅ บทความใหม่เกี่ยวกับเกาหลี</li>
-                    <li>✅ รีวิวอาหารเกาหลีพิเศษ</li>
-                    <li>✅ เคล็ดลับการท่องเที่ยว</li>
-                    <li>✅ โปรโมชั่นและส่วนลด</li>
-                </ul>
+          <div class="newsletter-text">
+            <h2>📬 รับข่าวสารเกาหลี</h2>
+            <p>สมัครรับบทความใหม่ รีวิวอาหาร ข่าว K League และเคล็ดลับท่องเที่ยวเกาหลีทุกสัปดาห์!</p>
+            <ul class="newsletter-benefits">
+              <li>✅ บทความใหม่เกี่ยวกับเกาหลี</li>
+              <li>✅ รีวิวอาหารเกาหลีพิเศษ</li>
+              <li>✅ เคล็ดลับการท่องเที่ยว</li>
+              <li>✅ โปรโมชั่นและส่วนลด</li>
+            </ul>
+          </div>
+
+          <div class="newsletter-form-container">
+            <form id="newsletterForm" class="newsletter-form">
+              <div class="form-row">
+                <input 
+                  type="text" 
+                  id="newsletter-name" 
+                  name="name" 
+                  placeholder="ชื่อของคุณ"
+                  required
+                  aria-label="Your name"
+                >
+              </div>
+              <div class="form-row">
+                <input 
+                  type="email" 
+                  id="newsletter-email" 
+                  name="email" 
+                  placeholder="อีเมลของคุณ"
+                  required
+                  aria-label="Your email"
+                >
+              </div>
+              <button type="submit" class="btn-subscribe" id="subscribeBtn" aria-label="Subscribe to newsletter">
+                <span class="text">สมัครรับข่าวสาร</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <p class="newsletter-privacy">
+                เราเคารพความเป็นส่วนตัวของคุณ ยกเลิกได้ทุกเมื่อ
+              </p>
+            </form>
+
+            <div class="newsletter-success" id="newsletterSuccess">
+              <div class="success-icon">✅</div>
+              <h3>สมัครสำเร็จ!</h3>
+              <p>ขอบคุณที่สมัครรับข่าวสาร เราจะส่งอีเมลยืนยันให้คุณเร็วๆ นี้</p>
             </div>
 
-            <div class="newsletter-form-container">
-                <form id="newsletterForm" class="newsletter-form">
-                    <div class="form-row">
-                        <input 
-                            type="text" 
-                            id="newsletter-name" 
-                            name="name" 
-                            placeholder="ชื่อของคุณ"
-                            required
-                        >
-                    </div>
-                    <div class="form-row">
-                        <input 
-                            type="email" 
-                            id="newsletter-email" 
-                            name="email" 
-                            placeholder="อีเมลของคุณ"
-                            required
-                        >
-                    </div>
-                    <button type="submit" class="btn-subscribe" id="subscribeBtn">
-                        <span class="text">สมัครรับข่าวสาร</span>
-                        <span class="spinner"></span>
-                    </button>
-                    <p class="newsletter-privacy">
-                        เราเคารพความเป็นส่วนตัวของคุณ ยกเลิกได้ทุกเมื่อ
-                    </p>
-                </form>
-
-                <div class="newsletter-success" id="newsletterSuccess">
-                    <div class="success-icon">✅</div>
-                    <h3>สมัครสำเร็จ!</h3>
-                    <p>ขอบคุณที่สมัครรับข่าวสาร เราจะส่งอีเมลยืนยันให้คุณเร็วๆ นี้</p>
-                </div>
-
-                <div class="newsletter-error" id="newsletterError">
-                    <div class="error-icon">❌</div>
-                    <p id="newsletterErrorMessage"></p>
-                </div>
+            <div class="newsletter-error" id="newsletterError">
+              <div class="error-icon">❌</div>
+              <p id="newsletterErrorMessage"></p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-
-<style>
-/* ========================================
-   NEWSLETTER SECTION STYLES
-   ======================================== */
-.newsletter {
-    background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
-    padding: 80px 0;
-    color: white;
-}
-
-.newsletter-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.newsletter-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.newsletter-text p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.95;
-    line-height: 1.6;
-}
-
-.newsletter-benefits {
-    list-style: none;
-    padding: 0;
-}
-
-.newsletter-benefits li {
-    padding: 10px 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.newsletter-form-container {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-}
-
-.newsletter-form .form-row {
-    margin-bottom: 15px;
-}
-
-.newsletter-form input {
-    width: 100%;
-    padding: 15px 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.newsletter-form input:focus {
-    outline: none;
-    border-color: #003478;
-    box-shadow: 0 0 0 3px rgba(0, 52, 120, 0.1);
-}
-
-.newsletter-form input.error {
-    border-color: #CD2E3A;
-}
-
-.btn-subscribe {
-    width: 100%;
-    padding: 15px;
-    background: linear-gradient(135deg, #003478 0%, #CD2E3A 100%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: 10px;
-}
-
-.btn-subscribe:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0, 52, 120, 0.3);
-}
-
-.btn-subscribe:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.btn-subscribe .spinner {
-    display: none;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top-color: white;
-    border-radius: 50%;
-    animation: spin 0.6s linear infinite;
-    margin: 0 auto;
-}
-
-.btn-subscribe.loading .spinner {
-    display: block;
-}
-
-.btn-subscribe.loading .text {
-    display: none;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-.newsletter-privacy {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #999;
-    margin-top: 15px;
-}
-
-.newsletter-success,
-.newsletter-error {
-    display: none;
-    text-align: center;
-    padding: 30px;
-}
-
-.newsletter-success.show,
-.newsletter-error.show {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.success-icon,
-.error-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.newsletter-success h3 {
-    color: #4CAF50;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.newsletter-success p,
-.newsletter-error p {
-    color: #666;
-    font-size: 1rem;
-}
-
-.newsletter-error p {
-    color: #CD2E3A;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .newsletter-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .newsletter-text h2 {
-        font-size: 2rem;
-    }
-
-    .newsletter-form-container {
-        padding: 30px 20px;
-    }
-}
-</style>
-
-<script>
-/* ========================================
-   NEWSLETTER FORM JAVASCRIPT
-   ======================================== */
-(function() {
-    // ⚠️ แก้ไข API URL ตรงนี้
-    const API_URL = 'https://script.google.com/macros/s/AKfycby7avnaEupLZSGy7njhY4zuMy3wMBxlPwrbgJvvFroWurmPq9yLi7ytU7ZYGQDw_eRT/exec';
-
-    const form = document.getElementById('newsletterForm');
-    const subscribeBtn = document.getElementById('subscribeBtn');
-    const successDiv = document.getElementById('newsletterSuccess');
-    const errorDiv = document.getElementById('newsletterError');
-    const errorMessage = document.getElementById('newsletterErrorMessage');
-
-    if (!form) return; // ถ้าไม่มี form ก็ไม่ต้องทำอะไร
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // Reset
-        errorDiv.classList.remove('show');
-        document.querySelectorAll('.newsletter-form input').forEach(el => {
-            el.classList.remove('error');
-        });
-
-        // Get values
-        const name = document.getElementById('newsletter-name').value.trim();
-        const email = document.getElementById('newsletter-email').value.trim();
-
-        // Validate
-        if (!name || name.length < 2) {
-            document.getElementById('newsletter-name').classList.add('error');
-            errorMessage.textContent = 'กรุณากรอกชื่อที่ถูกต้อง';
-            errorDiv.classList.add('show');
-            return;
-        }
-
-        if (!email || !isValidEmail(email)) {
-            document.getElementById('newsletter-email').classList.add('error');
-            errorMessage.textContent = 'กรุณากรอกอีเมลที่ถูกต้อง';
-            errorDiv.classList.add('show');
-            return;
-        }
-
-        // Show loading
-        subscribeBtn.disabled = true;
-        subscribeBtn.classList.add('loading');
-
-        try {
-            // Call API
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    action: 'subscribeEmail',
-                    name: name,
-                    email: email
-                })
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                // Show success
-                form.style.display = 'none';
-                successDiv.classList.add('show');
-            } else {
-                // Show error
-                errorMessage.textContent = result.message || 'เกิดข้อผิดพลาด กรุณาลองใหม่';
-                errorDiv.classList.add('show');
-            }
-
-        } catch (error) {
-            console.error('Subscribe error:', error);
-            errorMessage.textContent = 'เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่อีกครั้ง';
-            errorDiv.classList.add('show');
-        } finally {
-            // Hide loading
-            subscribeBtn.disabled = false;
-            subscribeBtn.classList.remove('loading');
-        }
-    });
-
-    function isValidEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
-    }
-})();
-</script>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 OYEON. Made with ❤️</p>
+      <p>&copy; 2026 OYEON. Made with ❤️ and 🇰🇷</p>
     </footer>
 
     <!-- Social Floating Buttons -->
@@ -1240,42 +611,51 @@
       <a
         href="https://github.com/OyeonOppa/"
         target="_blank"
+        rel="noopener noreferrer"
         class="social-btn github"
-        title="GitHub"
+        aria-label="Visit OYEON's GitHub profile (opens in new tab)"
       >
-        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
       </a>
       <a
         href="https://www.linkedin.com/in/oyeon/"
         target="_blank"
+        rel="noopener noreferrer"
         class="social-btn linkedin"
-        title="LinkedIn"
+        aria-label="Visit OYEON's LinkedIn profile (opens in new tab)"
       >
-        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
       </a>
       <a
         href="https://instagram.com/oyeonoppa"
         target="_blank"
+        rel="noopener noreferrer"
         class="social-btn instagram"
-        title="Instagram"
+        aria-label="Visit OYEON's Instagram profile (opens in new tab)"
       >
-        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
       </a>
       <a
         href="https://facebook.com/oyeonoppa"
         target="_blank"
+        rel="noopener noreferrer"
         class="social-btn facebook"
-        title="Facebook"
+        aria-label="Visit OYEON's Facebook page (opens in new tab)"
       >
-        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
       </a>
-
-      <a href="#support" target="_blank" class="social-btn support" title="Support Me">        <i class="fa-brands fa-support"></i></a>
+      <a 
+        href="#support" 
+        class="social-btn support" 
+        aria-label="Support OYEON's work"
+      >
+        ☕
+      </a>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-      <i class="fa-solid fa-chevron-up"></i>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
     </button>
 
     <!-- Font Awesome -->
@@ -1285,6 +665,8 @@
     />
 
     <!-- JavaScript -->
+    <script src="js/config.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
   </body>
 </html>
